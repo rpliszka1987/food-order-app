@@ -29,6 +29,12 @@ const DUMMY_MEALS = [
     description: "Healthy...and green...",
     price: 18.99,
   },
+  {
+    id: "m5",
+    name: "Salad",
+    description: "Healthy greens salad",
+    price: 11.99,
+  },
 ];
 
 const AvailableMeals = () => {
@@ -36,13 +42,15 @@ const AvailableMeals = () => {
     <MealItem
       key={meal.id}
       name={meal.name}
-      description={meal.descritpion}
+      description={meal.description}
       price={meal.price}
     />
   ));
 
   return (
+    
     <section className={classes.meals}>
+      {console.log(mealsList)}
       <Card>
         <ul>{mealsList}</ul>
       </Card>
