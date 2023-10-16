@@ -48,9 +48,7 @@ const AvailableMeals = () => {
   ));
 
   return (
-    
     <section className={classes.meals}>
-      {console.log(mealsList)}
       <Card>
         <ul>{mealsList}</ul>
       </Card>
