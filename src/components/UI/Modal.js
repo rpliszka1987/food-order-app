@@ -16,7 +16,7 @@ const ModalOverlay = (props) => {
 };
 
 // select the elemt with id to display the modal helper.
-const portalElement = document.getElementsById("overlays");
+const portalElement = document.getElementById("overlays");
 
 const Modal = (props) => {
   return (
