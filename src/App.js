@@ -20,6 +20,7 @@ function App() {
 
   return (
     <Fragment>
+      {/* Shows Cart if the state is true */}
       {cartIsShown && <Cart onHideCart={hideCartIsShown} />}
       <Header onShowCart={showCartHandler} />
       <main>
