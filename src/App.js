@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   // State to manage cart component displaying
@@ -18,14 +19,14 @@ function App() {
   };
 
   return (
-    <Fragment>
+    <CartProvider>
       {/* Shows Cart if the state is true */}
       {cartIsShown && <Cart onHideCart={hideCartIsShown} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 
